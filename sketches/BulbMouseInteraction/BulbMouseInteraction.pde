@@ -12,7 +12,7 @@ class Bulb {
 
   // Constructor: runs when we create a Bulb with new Bulb()
   Bulb() {
-    posX = 250;
+    posX = width/2;
     upperBulbSize = 150;
     bulbSize = 220;
     hoverOffset = posX * 0.5;
@@ -44,6 +44,7 @@ Bulb bulb;
 
 void setup() {
   size(500, 500);
+  surface.setResizable(true);
   bulb = new Bulb();
   background(220);
 }
