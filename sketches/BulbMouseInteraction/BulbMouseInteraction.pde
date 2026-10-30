@@ -9,9 +9,9 @@ void setup() {
 void draw() {
   background(220);
   fill(255);  
-  rect(245, -25, 10, 50); 
-  circle(posX, 100, 150);
-  rect(175, 100, 150, 150);
+  rect(245, -25, 10, 50); //Wire
+  circle(posX, 100, 150); //bulbtop
+  rect(175, 100, 150, 150); //bulbmid
   //boolean something = false;
   if(mouseX >= (posX - (posX * 0.5))
   && mouseX <= (posX + (posX * 0.5))
@@ -25,7 +25,7 @@ void draw() {
     bulbSize=220;
     fill(255);
   }
-  circle(posX, 260, bulbSize);
+  circle(posX, 260, bulbSize); //bulb
   
 
 }
