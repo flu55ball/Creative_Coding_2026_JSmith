@@ -4,7 +4,10 @@
 
 <h2><b>BulbMouseInteraction</b></h2>
 
-<p> - Created a interactive bulb using processing and java. 
+<p>
+
+- Created a interactive bulb using processing and java.
+ 
 - Using "mouseX" & "mouseY" allows us to track the position of the cursor.
 
 - When the mouse is hovering over the bulb the bulb gets bigger and the colour of the bulb change 
