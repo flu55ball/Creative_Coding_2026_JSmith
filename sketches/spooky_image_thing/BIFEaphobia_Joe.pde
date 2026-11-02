@@ -16,7 +16,6 @@ void draw()
 {
   background(0);
   float audioLevel = in.left.level();
-  image(img, 0, 0);
   text("Audio level: " + nf(audioLevel*1000, 1, 3), 10, 100);
   fill (255,0,0);
   rect( 0, 0, in.left.level()*width, 100 );
@@ -24,4 +23,14 @@ void draw()
   fill (0,0,0);
   text("test test test test", 10, 300);
   
+  if(audioLevel*1000>50){
+    drawImage();
+    
+  }
+  
+}
+
+void drawImage()
+{
+  image(img, 0, 0);
 }
