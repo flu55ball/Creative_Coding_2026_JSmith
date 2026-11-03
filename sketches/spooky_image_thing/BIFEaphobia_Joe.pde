@@ -12,6 +12,8 @@ void setup() {
   in = minim.getLineIn();
 }
 
+
+
 void draw()
 {
   background(0);
