@@ -56,7 +56,7 @@ If I were going to do it again, I would approach the calculations for the bulb s
 
 <h2><b>rising_bubbles</b></h2>
 
-### [RisingBubbles.pde](sketches/RisingBubbles/Rising_Bubbles.pde)
+### [RisingBubbles.pde](sketches/Rising_Bubbles/Rising_Bubbles.pde)
 
 ### Overview 
 Creates a hundred bubbles on the screen moving slowly upwards that loops.
@@ -81,7 +81,7 @@ Creates a hundred bubbles on the screen moving slowly upwards that loops.
  x.Render();
  This loop visits each array slot, gets the Bubble object stored there as x, updates it and renders it
 
-### [Bubble_Class.pde](sketches/RisingBubbles/Bubble_Class.pde)
+### [Bubble_Class.pde](sketches/Rising_Bubbles/Bubble_Class.pde)
 
 - I created a class called Bubble
  
