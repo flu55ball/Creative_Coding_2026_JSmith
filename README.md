@@ -81,7 +81,7 @@ Creates a hundred bubbles on the screen moving slowly upwards that loops.
  x.Render();
  This loop visits each array slot, gets the Bubble object stored there as x, updates it and renders it
 
-### [Bubble_Class.pde](sketches/Rising_Bubbles/Bubble_Class.pde)
+### [bubble_class.pde](sketches/rising_bubbles/bubble_class.pde)
 
 - I created a class called Bubble
  
@@ -104,7 +104,7 @@ Creates a hundred bubbles on the screen moving slowly upwards that loops.
 Sorts a list of ages using a bubblesort the pints them. The displays the ages in a bar graph then bubble sorts the bar graph.
 
 
-### [AgesArrayAverageBubbleSort.pde](sketches/RisingBubbles/AgesArrayAverageBubbleSort.pde)
+### [AgesArrayAverageBubbleSort.pde](sketches/AgesArrayAverageBubbleSort/AgesArrayAverageBubbleSort.pde)
 
 - int[] ages = integer array called ages & integer variables for barwidth, barspacing and barlength
 
@@ -119,7 +119,7 @@ Sorts a list of ages using a bubblesort the pints them. The displays the ages in
 - for () loop to go through all the values to create a rect() and text() for each
 
 
-### [sorting.pde](sketches/RisingBubbles/sorting.pde)
+### [sorting.pde](sketches/AgesArrayAverageBubbleSort/sorting.pde)
 
 - void BubbleSort()  defines a method that uses the bubble sort algorithm to sort the ages array in ascending order. 
 
