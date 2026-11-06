@@ -7,9 +7,8 @@
 
 ### [BulbMouseInteraction.pde](sketches/BulbMouseInteraction/BulbMouseInteraction.pde)
 
-- Created a interactive bulb using processing and java.
-
-- When the mouse is within a certain area, it changes the size and colour of a circle on the bulb.
+### Overview 
+Created a interactive bulb using processing and java. When the mouse is within a certain area, it changes the size and colour of a circle on the bulb.
 
 - Bulb bulb; Declares a variable named bulb whose type is Bulb. The object is created later by bulb = new Bulb(); in setup()
 
@@ -59,6 +58,9 @@ If I were going to do it again, I would approach the calculations for the bulb s
 
 ### [RisingBubbles.pde](sketches/RisingBubbles/RisingBubbles.pde)
 
+### Overview 
+Creates a hundred bubbles on the screen moving slowly upwards that loops.
+
 - Bubble[] b = new Bubble[100]; declares an array variable called b and creates an array with 100 slots that can hold Bubble objects.
 
 - An **array** is a variable that holds multiple items of the same type in numbered slots. (a numbered list)
@@ -97,10 +99,27 @@ If I were going to do it again, I would approach the calculations for the bulb s
 
 ## AgesArray
 
+### Overview 
+
+Sorts a list of ages using a bubblesort the pints them. The displays the ages in a bar graph then bubble sorts the bar graph.
 
 
-### [AgesArray.pde](path/to/your/AgesArray.pde)
+### [AgesArrayAverageBubbleSort.pde](sketches/RisingBubbles/AgesArrayAverageBubbleSort.pde)
 
-### Reflection
-  
+- int[] ages = integer array called ages & integer variables for barwidth, barspacing and barlength
+
+- void setup() runs once when the sketch starts.
+
+  - size() creates the canvas , Average() calculates the average and draws the bars and their labels, BubbleSort() sorts the values in the ages array , printArray(ages) prints the array after it has been sorted.
+ 
+- void Average() {
+
+- fill(255); sets colour of bars and numbers below
+
+- for () loop to go through all the values to create a rect() and text() for each
+
+
+### [sorting.pde](sketches/RisingBubbles/sorting.pde)
+
+- void BubbleSort()  defines a method that uses the bubble sort algorithm to sort the ages array in ascending order. 
 
