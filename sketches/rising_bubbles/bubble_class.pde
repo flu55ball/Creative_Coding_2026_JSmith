@@ -12,12 +12,16 @@ class Bubble {
   
   void Update ()
   {
-  pos.y--;  
+  pos.y--; 
+  if (pos.y + size / 2.0 < 0) {
+  pos.y = height + size / 2.0;
+  pos.x = random(0,width);
   }
+}
   
   void Render () 
   {
-   ellipse(pos.x, pos.y, size, size);
+  ellipse(pos.x, pos.y, size, size);
   }
   
 } 

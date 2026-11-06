@@ -19,9 +19,9 @@ void Average() {
     average += ages[i];
   }
 
-fill(0);
-// Read one array element each time through the for loop
-for (int i = 0; i < ages.length; i++) {
+fill(255);
+
+for (int i = 0; i < ages.length; i++) { // Read one array element each time through the for loop
   rect(0, i*barspacing, ages[i]*barlength, barwidth);
   text(ages[i], ages[i]*barlength + 5, i*barspacing + barwidth);
 } 
