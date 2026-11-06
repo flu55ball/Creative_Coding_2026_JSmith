@@ -49,7 +49,7 @@
 
 - I update posX using width / 2 inside display() so the bulb’s horizontal centre follows the window width
 
-## Reflection
+#### Reflection
 
 My goal for this exercise was to expand on the class work by making the window resizable, keeping the bulb centred on screen and creating a Bulb class. 
 If I were going to do it again, I would approach the calculations for the bulb shape, the bulb shape's location in a more efficient way 
