@@ -5,7 +5,7 @@
 <h2><b>BulbMouseInteraction</b></h2>
 
 
-<h3><b>BulbMouseInteraction.pde</b></h3>
+### [BulbMouseInteraction.pde](sketches/BulbMouseInteraction/BulbMouseInteraction.pde)
 
 - Created a interactive bulb using processing and java.
 
@@ -21,13 +21,13 @@
 
 - bulb.display(); runs the method within the bulb class to display the bulb object
 
-### Bulb_Class.pde 
+### [Bulb_Class.pde](sketches/BulbMouseInteraction/Bulb_Class.pde)
 
 - class Bulb { defines a class called Bulb
 
-- int is the data type for whole numbers
+- **int** is the data type for whole numbers
 
-- float is the data type for decimal value
+- **float** is the data type for decimal value
 
 - Added **private and public** "Access level modifiers" to the variables
 
@@ -52,20 +52,36 @@
 
 My goal for this exercise was to expand on the class work by making the window resizable, keeping the bulb centred on screen and creating a Bulb class. 
 If I were going to do it again, I would approach the calculations for the bulb shape, the bulb shape's location in a more efficient way 
-
-
-
-
-
-
  
 
 
 <h2><b>rising_bubbles</b></h2>
 
-<p>
+### [RisingBubbles.pde](sketches/RisingBubbles/RisingBubbles.pde)
 
-- I created a class called Bubble
+- Bubble[] b = new Bubble[100]; declares an array variable called b and creates an array with 100 slots that can hold Bubble objects.
+
+- An **array** is a variable that holds multiple items of the same type in numbered slots. (a numbered list)
+
+- A **String** is a data type that stores text
+
+- for(int i =0; i < b.length; i ++){ is astandard for loop goes through the array one slot at a time, from index 0 to the last slot. It uses the array’s length to know when to stop.
+
+- b[i] = new Bubble( creates a Bubble object with its starting position and size, then stores it in array slot i
+
+- void setup() { is a "method" that runs once when the sketch starts. is runs size, creates a bulb object and sets background colour
+  
+- void draw() { runs every frame
+
+- for(int i =0; i < b.length; i ++){
+ Bubble x = b[i];
+ x.Update();
+ x.Render();
+ This loop visits each array slot, gets the Bubble object stored there as x, updates it and renders it
+
+### [Bubble_Class.pde](sketches/RisingBubbles/Bubble_Class.pde)
+
+-   I created a class called Bubble
  
 - Inside the class, we declared a PVector called pos
 
