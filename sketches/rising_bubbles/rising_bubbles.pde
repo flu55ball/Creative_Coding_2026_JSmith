@@ -1,23 +1,19 @@
-class Bubble { 
+Bubble[] b = new Bubble[100];
+
+void setup () { 
+  
+ size(500,500);
+ for(int i =0; i < b.length; i ++){
+ b[i] = new Bubble((int)random(0, width),(int)random(0,height),(int)random(2,50));
+ } 
+}
+
+void draw (){
+ background(0);
+ for(int i =0; i < b.length; i ++){
+ Bubble x = b[i];
+ x.Update();
+ x.Render();
  
-  PVector pos; 
-  int size; 
-  
-  Bubble(int x, int y, int size) 
-  {
-    pos = new PVector (x,y);
-    this.size=size;
-       
-  } 
-  
-  void Update ()
-  {
-  pos.y--;  
-  }
-  
-  void Render () 
-  {
-   ellipse(pos.x, pos.y, size, size);
-  }
-  
-} 
+ } 
+}
