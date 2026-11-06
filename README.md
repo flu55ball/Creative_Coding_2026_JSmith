@@ -7,9 +7,8 @@
 
 ### [BulbMouseInteraction.pde](sketches/BulbMouseInteraction/BulbMouseInteraction.pde)
 
-- Created a interactive bulb using processing and java.
-
-- When the mouse is within a certain area, it changes the size and colour of a circle on the bulb.
+### Overview 
+Created a interactive bulb using processing and java. When the mouse is within a certain area, it changes the size and colour of a circle on the bulb.
 
 - Bulb bulb; Declares a variable named bulb whose type is Bulb. The object is created later by bulb = new Bulb(); in setup()
 
@@ -57,7 +56,10 @@ If I were going to do it again, I would approach the calculations for the bulb s
 
 <h2><b>rising_bubbles</b></h2>
 
-### [RisingBubbles.pde](sketches/RisingBubbles/RisingBubbles.pde)
+### [rising_bubbles.pde](sketches/rising_bubbles/rising_bubbles.pde)
+
+### Overview 
+Creates a hundred bubbles on the screen moving slowly upwards that loops.
 
 - Bubble[] b = new Bubble[100]; declares an array variable called b and creates an array with 100 slots that can hold Bubble objects.
 
@@ -79,7 +81,7 @@ If I were going to do it again, I would approach the calculations for the bulb s
  x.Render();
  This loop visits each array slot, gets the Bubble object stored there as x, updates it and renders it
 
-### [Bubble_Class.pde](sketches/RisingBubbles/Bubble_Class.pde)
+### [bubble_class.pde](sketches/rising_bubbles/bubble_class.pde)
 
 - I created a class called Bubble
  
@@ -95,6 +97,29 @@ If I were going to do it again, I would approach the calculations for the bulb s
 
 - void Render () draws an ellipse every frame
 
+## AgesArray
 
-  
+### Overview 
+
+Sorts a list of ages using a bubblesort the pints them. The displays the ages in a bar graph then bubble sorts the bar graph.
+
+
+### [AgesArrayAverageBubbleSort.pde](sketches/AgesArrayAverageBubbleSort/AgesArrayAverageBubbleSort.pde)
+
+- int[] ages = integer array called ages & integer variables for barwidth, barspacing and barlength
+
+- void setup() runs once when the sketch starts.
+
+  - size() creates the canvas , Average() calculates the average and draws the bars and their labels, BubbleSort() sorts the values in the ages array , printArray(ages) prints the array after it has been sorted.
+ 
+- void Average() {
+
+- fill(255); sets colour of bars and numbers below
+
+- for () loop to go through all the values to create a rect() and text() for each
+
+
+### [sorting.pde](sketches/AgesArrayAverageBubbleSort/sorting.pde)
+
+- void BubbleSort()  defines a method that uses the bubble sort algorithm to sort the ages array in ascending order. 
 
