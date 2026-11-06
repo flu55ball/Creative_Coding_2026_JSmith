@@ -19,7 +19,7 @@ class Bulb {
     rect(posX - 10 /2 , -25, 10, 50); //wire
     circle(posX, 100, upperBulbSize); //bulbtop
     rect(posX - upperBulbSize /2 , 100, upperBulbSize, upperBulbSize); //bulbmid
-    if (dist(posX, 260 ,mouseX, mouseY) < 110) {
+    if (dist(posX, 260 ,mouseX, mouseY) < 110) { //checks if the mouse is within 110 pixels of the bottom circle's centre
     bulbSize = 280;
     fill(255, 162, 10);
     } else {
