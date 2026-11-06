@@ -6,8 +6,8 @@ int barlength = 4;
 
 void setup() {
   size(500, 500);
-  Average();
   BubbleSort();
+  Average();
   printArray(ages);
 }
 
