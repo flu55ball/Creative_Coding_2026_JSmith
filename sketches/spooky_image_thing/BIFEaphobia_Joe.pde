@@ -16,7 +16,7 @@ void setup() {
   size(500, 500);
   surface.setResizable(true);
   
-  img = loadImage("lift logo.png");
+  img = loadImage("creepySanta_2.png");
   border = new Border();
   monster = new Image(img);
   
@@ -32,8 +32,11 @@ void setup() {
 void draw(){
   background(0);
   
-  border.Render();
-  monster.Render();
+  float audioLevel = in.left.level();
+  if(audioLevel*1000>50){
+  drawImage();
+  }
+  
   
   for(int i =0; i < r.length; i ++){
   Rain x = r[i];
@@ -41,10 +44,7 @@ void draw(){
   x.Render();
   }
     
-  float audioLevel = in.left.level();
-  if(audioLevel*1000>50){
-  drawImage();
-  }
+  border.Render();
   
   fill (255,0,0);
   rect( framesize, height-barsize-framesize, in.left.level()*width*10, barsize);
@@ -55,7 +55,6 @@ void draw(){
   //text("test test test test", 10, 300); 
 }
 
-void drawImage()
-{
-  image(img, 0, 0);
+void drawImage() {
+  monster.Render();
 }
