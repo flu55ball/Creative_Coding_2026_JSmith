@@ -81,12 +81,20 @@ If I were going to do it again, I would approach the calculations for the bulb s
 
 ### [Bubble_Class.pde](sketches/RisingBubbles/Bubble_Class.pde)
 
--   I created a class called Bubble
+- I created a class called Bubble
  
-- Inside the class, we declared a PVector called pos
+- PVector pos; pos stores the bubble’s x and y location using the PVector is a vector type
 
-- In this sketch pos stores the bubble’s x and y location using the PVector is a vector type
+- Bubble(int x, int y, int size) defines the constructor for the Bubble class. x, y, and size from the three values in b[i] = new Bubble()
 
-- 
+- pos = new PVector (x,y); create the new location of each bubble
+
+- this.size=size; defines the size of each bubble
+
+- void Update () is called once per frame and subtracts 1 from the bubble’s y-position, moving it up by one pixel each frame.
+
+- void Render () draws an ellipse every frame
+
+
   
-</p>
+
