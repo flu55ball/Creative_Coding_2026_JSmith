@@ -4,7 +4,6 @@
 
 <h2><b>BulbMouseInteraction</b></h2>
 
-<p>
 
 <h3><b>BulbMouseInteraction.pde</b></h3>
 
@@ -60,7 +59,7 @@ If I were going to do it again, I would approach the calculations for the bulb s
 
 
  
-</p>
+
 
 <h2><b>rising_bubbles</b></h2>
 
