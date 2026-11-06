@@ -56,7 +56,7 @@ If I were going to do it again, I would approach the calculations for the bulb s
 
 <h2><b>rising_bubbles</b></h2>
 
-### [RisingBubbles.pde](sketches/Rising_Bubbles/Rising_Bubbles.pde)
+### [Rising_Bubbles.pde](sketches/Rising_Bubbles/Rising_Bubbles.pde)
 
 ### Overview 
 Creates a hundred bubbles on the screen moving slowly upwards that loops.
