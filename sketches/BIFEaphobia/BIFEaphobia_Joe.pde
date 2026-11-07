@@ -55,6 +55,13 @@ void draw(){
   //text("test test test test", 10, 300); 
 }
 
+void windowResized() {
+  for (int i = 0; i < r.length; i++) {
+    r[i].pos.x = random(0, width);
+    r[i].pos.y = random(0, height);
+  }
+}
+
 void drawImage() {
   monster.Render();
 }

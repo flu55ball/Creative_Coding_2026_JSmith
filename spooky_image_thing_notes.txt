@@ -1,0 +1,124 @@
+<h1><b>Creative_Coding_2026_JSmith</b></h1>
+
+<h2><b>spooky_image_thing</b></h2>
+
+### Overview
+
+Creates a spooky audio-reactive sketch. When the left audio level passes a set threshold, a creepy Santa image appears. The sketch also displays falling rain, a white border and a red audio level bar. The sketch window is resizable.
+
+### [BIFEaphobia_Joe.pde](sketches/spooky_image_thing/BIFEaphobia_Joe.pde)
+
+- `import ddf.minim.*;` imports the Minim library, which is used for audio input.
+
+- `PImage img;` declares a variable that can store an image.
+
+- `Rain[] r = new Rain[1000];` declares an array called `r` with 1000 slots for Rain objects.
+
+- `Minim minim;` and `AudioInput in;` declare variables for starting Minim and receiving audio input.
+
+- `Border border;` and `Image monster;` declare variables for the Border and Image objects.
+
+- `void setup() {` is a method that runs once when the sketch starts. It sets the canvas size, makes the window resizable, loads the image, creates the objects, starts the audio input and creates the Rain objects.
+
+- `surface.setResizable(true);` allows the sketch window to be resized while it is running.
+
+- `img = loadImage("creepySanta_2.png");` loads the creepy Santa image into `img`.
+
+- `border = new Border();` creates a Border object.
+
+- `monster = new Image(img);` creates an Image object and gives it the loaded image.
+
+- `minim = new Minim(this);` starts Minim for this sketch.
+
+- `in = minim.getLineIn();` gets the live audio input.
+
+- The `for` loop creates 1000 Rain objects and gives each one a random starting position and size.
+
+- `void draw() {` runs every frame.
+
+- `background(0);` clears the screen to black each frame.
+
+- `float audioLevel = in.left.level();` reads the audio level from the left input channel.
+
+- `if (audioLevel * 1000 > 50) {` checks whether the audio level has passed the set threshold. If it has, `drawImage();` displays the Santa image.
+
+- The Rain `for` loop visits each Rain object, updates its position and renders it.
+
+- `border.Render();` draws the white border around the edges of the current window.
+
+- The red `rect()` uses the current audio level to change the width of the bar at the bottom of the screen.
+
+- `void windowResized() {` is a Processing event method that runs when the window is resized. I added it to give every Rain object a new random x and y position within the current `width` and `height`.
+
+- `void drawImage() {` calls the Render method in the Image class.
+
+### [Border_class.pde](sketches/spooky_image_thing/Border_class.pde)
+
+- `class Border {` defines a class called Border.
+
+- `void Render() {` defines a method that draws the border.
+
+- `fill(255);` sets the colour to white.
+
+- The four `rect()` lines draw the top, bottom, left and right sides of the border. They use `width` and `height` so the border follows the current size of the window.
+
+### [Image_class.pde](sketches/spooky_image_thing/Image_class.pde)
+
+- `class Image {` defines a class called Image.
+
+- `PImage img;` stores the image used by this object.
+
+- `Image(PImage img) {` defines the constructor and receives the image from the main sketch.
+
+- `this.img = img;` stores that image in the Image object.
+
+- `void Render() {` defines a method that displays the image.
+
+- `imageMode(CENTER);` makes the image position refer to its centre.
+
+- `image(img, width / 2, height / 2, width, height);` places the image in the centre of the canvas and scales it to the current window size.
+
+- `imageMode(CORNER);` sets the image mode back to the default after drawing.
+
+### [Rain_class.pde](sketches/spooky_image_thing/Rain_class.pde)
+
+- `class Rain {` defines a class called Rain.
+
+- `PVector pos;` stores the rain drop's x and y position.
+
+- `int size;` stores the size of the rain drop.
+
+- `Rain(int x, int y, int size)` defines the constructor. The x, y and size values come from the `new Rain()` line in the main sketch.
+
+- `pos = new PVector(x, y);` creates the position for the rain drop.
+
+- `this.size = size;` stores the size for this Rain object.
+
+- `void Update()` runs once per frame and adds a random value between 3 and 10 to the y-position, moving the rain drop down the screen.
+
+- `if (pos.y + size / 2.0 > height) {` checks whether the bottom edge of the rain drop has passed the bottom of the canvas.
+
+  - `pos.y = 0 + size / 2.0;` moves the rain drop back to the top of the canvas.
+
+  - `pos.x = random(0, width);` gives the rain drop a new random horizontal position.
+
+- `void Render()` draws the rain drop as a white ellipse with no outline.
+
+### Image files
+
+- `creepySanta_2.png` is the image loaded by the sketch and displayed when the audio threshold is passed.
+
+- `creepySanta_1.png` is included in the sketch folder but is not loaded by the current code.
+
+### [sketch.properties](sketches/spooky_image_thing/sketch.properties)
+
+- `main=BIFEaphobia_Joe.pde` sets `BIFEaphobia_Joe.pde` as the main sketch file.
+
+#### Reflection
+
+My goal for this sketch was to make a spooky image appear in response to sound. I added falling rain, a border and a red bar that displays the audio level. I also made the sketch window resizable and added a method to reposition the rain when the window size changes.
+
+If I were going to do it again, I would try making the rain speed a value stored in each Rain object, so each drop could have its own consistent speed.
+
+Note: The saved BIFEaphobia_Joe.pde file I reviewed does not yet include windowResized(). This note describes the version with that method added; save it in the sketch file if it is not already saved.
+
