@@ -169,13 +169,13 @@ Creates a spooky audio-reactive sketch. When the left audio level passes a set t
 
 - void drawImage() { calls the Render method in the Image class.
 
-### [Border_class.pde](sketches/BIFEatopia/Border_class.pde)
+### [Border_class.pde](sketches/BIFEaphobia/Border_class.pde)
 
 - This class draw the border
 
 - The four rect() lines draw the top, bottom, left and right sides of the border. They use width and height so the border follows the current size of the window.
 
-### [Image_class.pde](sketches/BIFEatopia/Image_class.pde)
+### [Image_class.pde](sketches/BIFEaphobia/Image_class.pde)
 
 
 - PImage img; stores the image used by this object.
@@ -192,7 +192,7 @@ Creates a spooky audio-reactive sketch. When the left audio level passes a set t
 
 - imageMode(CORNER); sets the image mode back to the default after drawing.
 
-### [Rain_class.pde](sketches/BIFEatopia/Rain_class.pde)
+### [Rain_class.pde](sketches/BIFEaphobia/Rain_class.pde)
 
 - I created a class called Rain
 
@@ -214,7 +214,7 @@ Creates a spooky audio-reactive sketch. When the left audio level passes a set t
 
 - void Render () draws an ellipse every frame
 
-<h2><b> Bifitopia Rain Interaction</b></h2>
+<h2><b> BIFEatopia Rain Interaction</b></h2>
 
 ### Overview
 Added an if statement to the Rain class so raindrops move away from the cursor when it is nearby. The cursor must be within 50 pixels horizontally and 5 pixels vertically.
