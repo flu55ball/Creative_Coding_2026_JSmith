@@ -123,5 +123,91 @@ Sorts a list of ages using a bubblesort the pints them. The displays the ages in
 
 ### [sorting.pde](sketches/AgesArrayAverageBubbleSort/sorting.pde)
 
-- void BubbleSort()  defines a method that uses the bubble sort algorithm to sort the ages array in ascending order. 
+- void BubbleSort()  defines a method that uses the bubble sort algorithm to sort the ages array in ascending order.
 
+<h2><b>BIFEaphobia</b></h2>
+
+### Overview
+
+Creates a spooky audio-reactive sketch. When the left audio level passes a set threshold, a creepy Santa image appears. The sketch also displays falling rain, a white border and a red audio level bar. The sketch window is resizable.
+
+### [BIFEaphobia_Joe.pde](sketches/BIFEaphobia/BIFEaphobia_Joe.pde)
+
+- import ddf.minim.*; imports the Minim library, which is used for audio input.
+
+- PImage img; declares a variable that can store an image.
+
+- Rain[] r = new Rain[1000];` declares an array called `r` with 1000 slots for Rain objects.
+
+- Minim minim; & AudioInput in; declare variables for starting Minim and receiving audio input.
+
+- img = loadImage("creepySanta_2.png"); loads the creepy Santa image into img
+
+- border = new Border(); creates a Border object.
+
+- monster = new Image(img); creates an Image object and gives it the loaded image.
+
+- minim = new Minim(this); starts Minim for this sketch.
+
+- in = minim.getLineIn(); gets the live audio input.
+
+- The for loop creates 1000 Rain objects and gives each one a random starting position and size.
+
+- void draw(){ runs every frame.
+
+- float audioLevel = in.left.level(); reads the audio level from the left input channel and when the audio is above 50 it display the image
+
+- The Rain for loop visits each Rain object, updates its position and renders it.
+
+- border.Render(); draws the white border around the edges of the current window.
+
+- The red rect() uses the current audio level to change the width of the bar at the bottom of the screen.
+
+- void windowResized() { is a Processing event method that runs when the window is resized. I added it to give every Rain object a new random x and y position within the current width and height
+
+- void drawImage() { calls the Render method in the Image class.
+
+### [Border_class.pde](sketches/spooky_image_thing/Border_class.pde)
+
+- This class draw the border
+
+- The four rect() lines draw the top, bottom, left and right sides of the border. They use width and height so the border follows the current size of the window.
+
+### [Image_class.pde](sketches/spooky_image_thing/Image_class.pde)
+
+
+- PImage img; stores the image used by this object.
+
+- Image(PImage img) { defines the constructor and receives the image from the main sketch.
+
+- this.img = img; stores that image in the Image object.
+
+- void Render() { defines a method that displays the image.
+
+- imageMode(CENTER); makes the image position refer to its centre.
+
+- image(img, width / 2, height / 2, width, height); places the image in the centre of the canvas and scales it to the current window size.
+
+- imageMode(CORNER); sets the image mode back to the default after drawing.
+
+### [Rain_class.pde](sketches/spooky_image_thing/Rain_class.pde)
+
+- I created a class called Rain
+
+- PVector pos; pos stores the rain drop’s x and y location using the PVector is a vector type
+
+- Rain(int x, int y, int size) defines the constructor for the Rain class. x, y, and size from the three values in `r[i] = new Rain()`
+
+- pos = new PVector (x,y); creates the new location of each rain drop
+
+- this.size=size; defines the size of each rain drop
+
+- void Update () is called once per frame and adds a random value between 3 and 10 to the rain drop’s y-position, moving it down the screen by a random amount each frame.
+
+  - if (pos.y + size / 2.0 > height) { checks if the bottom edge of the rain drop has passed the bottom of the screen.
+
+  - pos.y = 0 + size / 2.0; moves the rain drop back to the top of the screen.
+
+  - pos.x = random(0,width); gives the rain drop a new random x location.
+
+- void Render () draws an ellipse every frame
