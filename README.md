@@ -219,6 +219,6 @@ Creates a spooky audio-reactive sketch. When the left audio level passes a set t
 ### Overview
 Added an if statement to the Rain class so raindrops move away from the cursor when it is nearby. The cursor must be within 50 pixels horizontally and 5 pixels vertically.
 
-### [Rain_class.pde](sketches/Bifitopia-Rain-Interaction/Rain_class.pde)
+### [Rain_class.pde](sketches/BIFEtopia-rain-Interaction/Rain_class.pde)
 
 - If the mouse X position is greater than the bubble’s X position plus its radius, and the mouse X position is less than the bubble’s X position plus the mouse range, move it 5 pixels to the right. Otherwise, move it 5 pixels to the left.
