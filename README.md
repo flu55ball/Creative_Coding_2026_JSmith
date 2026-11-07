@@ -123,5 +123,13 @@ Sorts a list of ages using a bubblesort the pints them. The displays the ages in
 
 ### [sorting.pde](sketches/AgesArrayAverageBubbleSort/sorting.pde)
 
-- void BubbleSort()  defines a method that uses the bubble sort algorithm to sort the ages array in ascending order. 
+- void BubbleSort()  defines a method that uses the bubble sort algorithm to sort the ages array in ascending order.
+
+<h2><b>BIFEaphobia</b></h2>
+
+### Overview
+
+Creates a spooky audio-reactive sketch. When the left audio level passes a set threshold, a creepy Santa image appears. The sketch also displays falling rain, a white border and a red audio level bar. The sketch window is resizable.
+
+### [BIFEaphobia_Joe.pde](sketches/BIFEaphobia/BIFEaphobia_Joe.pde)
 
