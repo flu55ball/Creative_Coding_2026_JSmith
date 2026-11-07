@@ -3,12 +3,10 @@
 <h1><b>Creative_Coding_2026_JSmith</b></h1>
 
 <h2><b>BulbMouseInteraction</b></h2>
-
-
-### [BulbMouseInteraction.pde](sketches/BulbMouseInteraction/BulbMouseInteraction.pde)
-
 ### Overview 
 Created a interactive bulb using processing and java. When the mouse is within a certain area, it changes the size and colour of a circle on the bulb.
+
+### [BulbMouseInteraction.pde](sketches/BulbMouseInteraction/BulbMouseInteraction.pde)
 
 - Bulb bulb; Declares a variable named bulb whose type is Bulb. The object is created later by bulb = new Bulb(); in setup()
 
@@ -53,13 +51,13 @@ My goal for this exercise was to expand on the class work by making the window r
 If I were going to do it again, I would approach the calculations for the bulb shape, the bulb shape's location in a more efficient way 
  
 
-
 <h2><b>rising_bubbles</b></h2>
-
-### [rising_bubbles.pde](sketches/rising_bubbles/rising_bubbles.pde)
 
 ### Overview 
 Creates a hundred bubbles on the screen moving slowly upwards that loops.
+
+### [rising_bubbles.pde](sketches/rising_bubbles/rising_bubbles.pde)
+
 
 - Bubble[] b = new Bubble[100]; declares an array variable called b and creates an array with 100 slots that can hold Bubble objects.
 
