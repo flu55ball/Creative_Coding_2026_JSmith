@@ -3,7 +3,9 @@
 <h1><b>Creative_Coding_2026_JSmith</b></h1>
 
 <h2><b>BulbMouseInteraction</b></h2>
+
 ### Overview 
+
 Created a interactive bulb using processing and java. When the mouse is within a certain area, it changes the size and colour of a circle on the bulb.
 
 ### [BulbMouseInteraction.pde](sketches/BulbMouseInteraction/BulbMouseInteraction.pde)
