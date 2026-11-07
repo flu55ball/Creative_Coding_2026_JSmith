@@ -95,6 +95,8 @@ Creates a hundred bubbles on the screen moving slowly upwards that loops.
 
 - void Update () is called once per frame and subtracts 1 from the bubble’s y-position, moving it up by one pixel each frame.
 
+  -if (pos.y + size / 2.0 < 0) { pos.y = height + size / 2.0; if the location of the bottom of the circle is equal to the height of the screen plus the 
+
 - void Render () draws an ellipse every frame
 
 ## AgesArray
